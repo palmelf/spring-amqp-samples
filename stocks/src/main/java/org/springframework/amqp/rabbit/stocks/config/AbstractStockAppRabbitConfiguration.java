@@ -63,9 +63,9 @@ public abstract class AbstractStockAppRabbitConfiguration {
 	@Bean
 	public ConnectionFactory connectionFactory() {
 		//TODO make it possible to customize in subclasses.
-		CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
-		connectionFactory.setUsername("guest");
-		connectionFactory.setPassword("guest");
+		CachingConnectionFactory connectionFactory = new CachingConnectionFactory("192.168.1.247");
+		connectionFactory.setUsername("rabbit");
+		connectionFactory.setPassword("rabbit");
 		connectionFactory.setPort(port);
 		return connectionFactory;
 	}
